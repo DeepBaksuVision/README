@@ -1,6 +1,6 @@
 # 모두를 위한 Object Detection (이해부터 구현까지)
 
-해당 프로젝트는 [이재원](https://www.facebook.com/visionNoob?ref=br_rs)과 [정찬희](https://www.facebook.com/Cris.Jeong), [황동현](https://www.facebook.com/profile.php?id=100011640813154)이 진행하는 사이드 프로젝트입니다.
+해당 프로젝트는 [이재원](https://www.facebook.com/visionNoob?ref=br_rs), [정찬희](https://www.facebook.com/Cris.Jeong), [황동현](https://www.facebook.com/profile.php?id=100011640813154)이 진행하는 사이드 프로젝트입니다.
 
 
 
@@ -14,7 +14,7 @@
 
 현재 최종 목표는 다음과 같습니다.
 
-- 메인스트림에 있는 Object Detection 논문에 대한 이해-
+- 메인스트림에 있는 Object Detection 논문에 대한 이해
 - Object Detection 논문 구현
 - 초심자가 Object Detection을 공부할 때, 보고 학습할 수 있도록 체계적으로 정리된 Object Detection의 구현에 대한 문서 작성
 
