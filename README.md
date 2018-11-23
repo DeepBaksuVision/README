@@ -38,17 +38,19 @@
 
 # Meeting Log
 
-[1). 2018-11-15 회의](posts/meeting_log/2018_11_15.md)
+[1). 2018-11-22 회의](posts/meeting_log/2018_11_22.md)
 
-[2). 2018-11-09 회의](posts/meeting_log/2018_11_09.md)
+[2). 2018-11-15 회의](posts/meeting_log/2018_11_15.md)
 
-[3). 2018-11-02 회의](posts/meeting_log/2018_11_02.md)
+[3). 2018-11-09 회의](posts/meeting_log/2018_11_09.md)
 
-[4). 2018-10-14 회의](posts/meeting_log/2018_10_14.md)
+[4). 2018-11-02 회의](posts/meeting_log/2018_11_02.md)
 
-[5). 2018-09-28 회의](posts/meeting_log/2018_09_28.md)
+[5). 2018-10-14 회의](posts/meeting_log/2018_10_14.md)
 
-[6). 2018-09-14 회의](posts/meeting_log/2018_09_14.md)
+[6). 2018-09-28 회의](posts/meeting_log/2018_09_28.md)
 
-[7). 2018-08-31 회의](posts/meeting_log/2018_08_31.md)
+[7). 2018-09-14 회의](posts/meeting_log/2018_09_14.md)
+
+[8). 2018-08-31 회의](posts/meeting_log/2018_08_31.md)
 
