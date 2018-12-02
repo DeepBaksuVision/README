@@ -34,7 +34,15 @@
 - [Focal Loss for Deense Object Detection](https://arxiv.org/pdf/1708.02002.pdf)
 - [Accurate Single Stage Detector Using Recurrent Rolling Convolution](https://arxiv.org/pdf/1704.05776.pdf)
 
+​    
 
+# 협업 원칙
+
+- [Github으로 협업하기](posts/principle/collaborate_using_github.md)
+
+
+
+​     
 
 # Meeting Log
 
