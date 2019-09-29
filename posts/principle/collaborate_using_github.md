@@ -1,6 +1,98 @@
 # Github으로 협업하기
 
-​    
+본 문서는 DeepBaksuVision Team이 GitHub을 이용하여 협업하는 방법에 대해서 기술합니다. 본 문서는 **프로젝트 구조 및 작업방식 개요**, **프로젝트를 달성하기 위한 개발 방법론**으로 구성됩니다.
+
+
+
+## 1. 프로젝트 구조 및 작업방식의 개요
+
+### 1.1 프로젝트 구조
+
+프로젝트 저장소 구조는 아래 그림과 같이 Upstream Remote Repository / Personal Remote Repository / Personal Local Repository 로 구성됩니다. Upsream Remote Repository는 Github의 [DeepBaksuVision Team](https://github.com/DeepBaksuVision)에 있는 저장소 입니다. Personal Remote Repository는 Upstream Remote Repository를 Github의 Folk 기능을 이용하여 개인 Github으로 복제한 저장소를 말합니다. Personal Local Repository는 내 Github 계정의 저장소를 컴퓨터에 클론 받은 것을 말합니다. 
+
+
+
+요약하면 그림에서 (A)는 공통 팀 저장소, (B)는 개인 원격 저장소, (C)는 개인 원격 저장소와 연결되어있는 지역 저장소(내 작업 컴퓨터의 소스코드)가 됩니다.
+
+
+
+자세한 내용은 [우아한 형제 기술 블로그 "우린 Git-flow를 사용하고 있어요"](http://woowabros.github.io/experience/2017/10/30/baemin-mobile-git-branch-strategy.html)를 참조하시기 바랍니다.
+
+
+
+![repository_structure](https://user-images.githubusercontent.com/13328380/65828567-2a7a1280-e2d7-11e9-9708-6fd272bc709d.png)
+
+### 1.2 작업방식
+
+#### 1.2.1 개발 방법론
+
+##### 1.2.1.1 프로젝트 오너 / 스크럼 마스터 선정과 역활
+
+작업 방식은 애자일을 따르며 아래 그림은 애자일 프로세스에 대해서 묘사합니다. 프로젝트가 시작하기 전에 팀원들은 프로젝트 오너 겸 스크럼 마스터를 선정합니다. 프로젝트 오너 겸 스크럼 마스터는 스프린트 계획 회의를 진행하며, 매 스프린트의 상황을 모니터링 하며 회의록을 작성합니다. 
+
+
+
+##### 1.2.1.2 프로젝트 계획 회의
+
+프로젝트가 시작하면 프로젝트 오너는 팀원들과 일정을 조율하여 프로젝트 계획 회의를 진행합니다. 프로젝트 계획 회의에서는 궁극적으로 나왔으면 하는 결과물과 결과물을 보여줄 데모 시연을 선정합니다. 또한 결과물이 나왔을 때 결과물이 성공적으로 나왔음을 측정할 수 있는 기준을 구체적으로 선정하여 결과물을 평가합니다. 결과물이 선정되었다면 그 결과물을 산출하는 과정에서 중간에 달성해야하는 중간 결과물을 선정합니다. 중간결과물은 예상되는 개발기간이 2~4주 내외로 한 스프린트 기간 안에 달성될 수 있는 목표여야합니다. 만약 2~4주를 초과할 것 같은 중간 결과물이라면 중간 결과물을 더 세분화합니다. 중간 결과물 또한 최종 결과물과 같이 데모 시연과 성공적으로 중간 결과가 나왔음을 측정할 수 있는 기준을 선정합니다. 중간 결과물은 매우 구체적이며 빈틈없이 선정되어야합니다. 만약 프로젝트 계획회의에 고려하지 못한 중간 결과물이 있다면 스프린트 도중에 놓친 중간결과물을 달성해야해서 일정관리가 어려워집니다.  프로젝트 오너는 이렇게 선정된 최종결과물에 대한 명세와 중간결과물 리스트를 Product Backlog에 정리합니다. 이로써 프로젝트 계획 회의는 마무리됩니다.
+
+
+
+##### 1.2.1.3 스프린트 계획 회의
+
+프로젝트 계획 회의가 마무리 되었다면 스프린트 계획 회의를 진행합니다. 스프린트란 짧은 한 사이클의 개발 주기르 이야기하며 스프린트의 한 사이클은 일반적으로 2주~4주를 권장합니다. 스프린트 계획 회의란 한 사이클을 돌 때 어떠한 중간 결과물을 달성할지 계획하는 회의를 말합니다. 팀 멤버들은 Product Backlog를 확인하여 이번 스프린트에서 달성하고 싶은 중간결과물을 선택하여 자신의 업무에 할당합니다. 만약 스프린트 계획 회의 이전에 수행한 스프린트가 있다면 계획 회의를 진행하기 전에 코드 리뷰를 진행하고 스프린트 계획 회의를 진행합니다.
+
+![agile_approach](https://user-images.githubusercontent.com/13328380/65828862-8abe8380-e2da-11e9-8853-3d520568f4af.gif)
+
+
+
+##### 1.2.1.4 스프린트
+
+이제 본격적으로 스프린트를 시작합니다. 스프린트 시작 전 각 업무 담당자들은 Upstream Remote Repository에 자신의 업무에 대한 Issue card를 발행합니다. 작업자들은 Issue card 번호 기반으로 브랜치를 분기하여 작업합니다(브랜치 분기에 대한 상세 내용은 추후 설명합니다). 이제 스프린트 기간 동안 작업자들은 해당 작업을 수행합니다. 작업자들은 작업 수행 시 항상 데모 시연을 염두하고 소스 코드를 작성해야합니다. 데모 시연 코드와 중간 결과물을 모두 달성했다면 이제 작업한 브랜치를 메인 브랜치에 병합할 준비를 합니다. 병합 작업은 Personal Remote Repository의 브랜치에서 Upsteram Remote Repository의 develop 브랜치로의 pull request를 말합니다. pull request 확인은 항상 모든 작업자들이 함께 해야하며 pull request를 확인하는 모든 작업자들은 다음 스프린트 이전에 해당 pull request에 대한 데모 확인 및 코드를 읽어 다음 스프린트에 있을 코드 리뷰를 준비합니다.
+
+
+
+#### 1.2.2 브랜치 전략
+
+
+
+----
+
+.... 작업 중.....
+
+
+
+### 1.1 프로젝트 시작
+
+멤버들은 아래 절차를 따라 프로젝트 시작을 준비합니다.
+
+1. Upstream Remote Repository를 생성
+2. Upstream Remote Repository를 Personal Remote Repository로 Folk
+3. Personal Remote Repository를 개인 컴퓨터에 Clone
+
+
+
+### 1.2 프로젝트 작업 방식
+
+작업 목록은 프로젝트 회의를 통해서 결정됩니다. 결정된 작업은 Personal Remote Repository와 Personal Local Repository에서 하는 것을 목적으로 합니다. 
+
+
+
+
+
+
+
+### 1.1 Folk DeepBaksuVision Repository    
+
+
+
+## 1 Getting Start
+
+### 
+
+
+
+
 
 ## Meeting
 
